@@ -30,6 +30,7 @@ dependencies:
   hooks_riverpod:
   state_notifier:
   get:
+  flutter_dotenv:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -54,6 +55,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - .env
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

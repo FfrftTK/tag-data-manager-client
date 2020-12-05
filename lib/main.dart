@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:reactive_forms/reactive_forms.dart';
@@ -7,13 +8,19 @@ import 'package:tag_data_manager_client/utils/network/app_dio_client.dart';
 import 'entities/entities.dart';
 import 'services/services.dart';
 
-void main() {
+AppDioClient dioClient;
+TagService tagService;
+UserService userService;
+
+Future<void> main() async {
+  await DotEnv().load('.env');
+  dioClient = AppDioClient('${DotEnv().env['API_HOST']}');
+  tagService = TagService(dioClient: dioClient);
+  userService = UserService(dioClient: dioClient);
+
   runApp(MyApp());
 }
 
-final dioClient = AppDioClient('http://192.168.68.106:8080');
-final tagService = TagService(dioClient: dioClient);
-final userService = UserService(dioClient: dioClient);
 final dateFormatter = DateFormat('yyyy/MM/dd HH:mm');
 
 class MyApp extends StatelessWidget {
