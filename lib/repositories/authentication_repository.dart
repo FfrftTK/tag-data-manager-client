@@ -1,5 +1,4 @@
-import 'package:flutter/foundation.dart';
-import 'package:tag_data_manager_client/utils/utils.dart';
+part of repositories;
 
 mixin AuthenticationRepository {
   Future<Result<String>> login({
