@@ -23,6 +23,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dio:
+  loader_overlay:
+  reactive_forms:
+  flutter_hooks:
+  hooks_riverpod:
+  state_notifier:
+  get:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -32,6 +39,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  freezed:
+  json_serializable:
+  build_runner:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
