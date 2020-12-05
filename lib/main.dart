@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import "package:intl/intl.dart";
+import 'package:intl/intl.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 import 'package:tag_data_manager_client/utils/network/app_dio_client.dart';
 
@@ -46,7 +46,7 @@ class UserPage extends StatelessWidget {
           final tag = user.tags[idx];
           return Card(
             child: ListTile(
-              leading: Icon(Icons.description),
+              leading: const Icon(Icons.description),
               title: Text('ID: ${tag.code}'),
               subtitle: Text(tag.description),
               trailing:
@@ -151,7 +151,7 @@ class SignInPage extends StatelessWidget {
     );
   }
 
-  Future<String> attemptSignIn(Map<String, dynamic> formValue) async {
+  Future<void> attemptSignIn(Map<String, dynamic> formValue) async {
     final username = formValue['username'];
 
     final result = await userService.login(

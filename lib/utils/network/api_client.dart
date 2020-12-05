@@ -20,7 +20,7 @@ class ApiClient {
     try {
       return await request
           .then((value) => Result.success(jsonDecodeCallback(value.data)));
-    } on Exception catch (e) {
+    } on Exception {
       return const Result.failure(NetworkExceptions.badRequest());
     }
   }
