@@ -24,6 +24,12 @@ dependencies:
   flutter:
     sdk: flutter
   dio:
+  loader_overlay:
+  reactive_forms:
+  flutter_hooks:
+  hooks_riverpod:
+  state_notifier:
+  get:
 
 
   # The following adds the Cupertino Icons font to your application.
